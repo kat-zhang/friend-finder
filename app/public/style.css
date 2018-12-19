@@ -16,3 +16,11 @@ body {
 #intro {
     font-size: 24px;
 }
+
+#survey{
+    margin: 50px;
+}
+
+.select{
+    color: blue;
+}
