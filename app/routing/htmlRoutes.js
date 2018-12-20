@@ -1,6 +1,14 @@
-var html = require("./servers");
-var exphbs = require("express-handlebars");
-app.engine("handlebars", exphbs({defaultLayout: "main"}))
-html.get("/",(req,res){
-    res.render("home")
-});
+var path = require("path");
+
+module.exports = function(app) {
+    app.get("/", function (req, res) {
+        console.log("jgjgjg");
+        // res.send("Arnab ie the best")
+        res.sendFile(path.join(__dirname, "../public/home.html"));
+    });
+
+    app.get("/survey", function (req, res) {
+        // res.send("Kat is the best!")
+        res.sendFile(path.join(__dirname, "../public/survey.html"));
+    });
+}

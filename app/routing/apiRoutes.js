@@ -1,5 +1,5 @@
 var mysql = require("mysql");
-var data= require("./servers");
+
 
 var connection;
 if (process.env.JAWSDB_URL) {
@@ -7,7 +7,7 @@ if (process.env.JAWSDB_URL) {
 } else {
     var connection = mysql.createConnection({
         host: "localhost",
-        port: 3306,
+        port: 3307,
         user: "root",
         password: "root",
         database: "survey_db"
