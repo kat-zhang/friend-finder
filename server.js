@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
     port: 8080,
     user: "root",
     password: "root",
-    database: "survey_db"
+    database: "sort_db"
 });
 connection.connect(function (error) {
     if (error) {
@@ -30,16 +30,6 @@ app.use(express.static("./app/public"));
 // require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
-
-
-app.get("/", function(req,res) {
-    connection.query("SELECT * FROM questions;", function(error, data) {
-        if (error) {
-            return res.status(500).end();
-        }
-        res.render("home");
-    });
-});
 
 
 
